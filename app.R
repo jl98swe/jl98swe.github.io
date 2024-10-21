@@ -32,7 +32,7 @@ server <- function(input, output, session) {
     
     output$map <- renderLeaflet({
       if (input$dataset == "cities") {
-        data <- maps::world.cities  # Begränsa till 1000 städer för bättre prestanda
+        data <- maps::world.cities  
         m <- leaflet(data) %>%
           addTiles() %>%
           addCircleMarkers(
